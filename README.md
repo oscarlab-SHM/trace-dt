@@ -15,7 +15,7 @@ Every page is a plain text file written in Markdown. GitHub turns these into the
 
 | To change | Open this file |
 |---|---|
-| Site name, email, highlight colour, the Register link, the LinkedIn link, the right-hand panel, the menu | `_config.yml` |
+| Site name, email, highlight colour, the Register link, the right-hand panel, the menu | `_config.yml` |
 | Home headline, intro line, and the two home sections | `index.md` |
 | People, communities and institutions | `participants.md` |
 | News | `news.md` |
@@ -30,22 +30,18 @@ The home page shows a live digital twin. Visitors drag the truck along the deck 
 
 ## 4. The "Register your interest" button
 
-The button appears in several places. By default it opens an email to you. To collect names in a spreadsheet instead:
+The button appears in several places. Right now it has no link set, so it does nothing until you add one. To collect names in a spreadsheet:
 
 1. Open Google Forms and create a short form (name, email, organisation).
 2. In the form, open the **Responses** tab and click the green Sheets icon. Google makes a spreadsheet that fills in by itself.
 3. Click **Send**, choose the link icon, and copy the link.
 4. In `_config.yml`, paste that link between the quotes after `register_url:`.
 
-## 5. The LinkedIn link and page
-
-The News page and the right-hand panel have a **Follow on LinkedIn** button. It points at `linkedin_url` in `_config.yml`, which is set to the CoSeC LinkedIn for now. When your TRACE-DT LinkedIn page is live, paste its address there. The file `LINKEDIN.md` in this folder has the full page text and the steps to create the page. (`LINKEDIN.md` is a note for you; it is not published as part of the site.)
-
-## 6. The right-hand panel
+## 5. The right-hand panel
 
 The panel shown beside every page (At a glance, Links, and the Join box) is built from `_config.yml`. Edit `rail_facts` and `rail_links` there to change it once for the whole site.
 
-## 7. Common jobs
+## 6. Common jobs
 
 **Add a news item.** In `news.md`, copy one item (the `###` heading, the date line and the text). Paste it at the top, under the note, and change the words.
 
@@ -55,7 +51,7 @@ The panel shown beside every page (At a glance, Links, and the Join box) is buil
 
 **Change the highlight colour.** In `_config.yml`, change the value after `highlight:`. Engineering blue `#0078ae` is the Strathclyde faculty colour.
 
-## 8. Markdown in one minute
+## 7. Markdown in one minute
 
 | You type | You get |
 |---|---|
@@ -66,7 +62,7 @@ The panel shown beside every page (At a glance, Links, and the Join box) is buil
 | `- item` | Bullet point |
 | `[text](https://link)` | Link |
 
-## 9. If something breaks
+## 8. If something breaks
 
 - The whole site stops updating: the cause is usually `_config.yml` or the top of `index.md`. A quotation mark may be missing, or a colon added inside the text.
 - To find the error: open the **Actions** tab. The latest run shows a red cross and a message.
