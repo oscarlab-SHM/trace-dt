@@ -1,0 +1,66 @@
+# ==========================================================
+#  SITE SETTINGS. Change the text after each colon.
+#  Keep the quotation marks where they are.
+# ==========================================================
+
+title: "TRACE-DT"
+tagline: "Trustworthy, Real-time and Agentic Digital Twins for Infrastructure"
+fellow: "Dr Basuraj Bhowmik"
+email: "basuraj.bhowmik@strath.ac.uk"
+
+# The "Register your interest" button link.
+# Paste your Google Form link between the quotes (see README for how to make one).
+# Until you do, the button opens an email to you.
+register_url: "mailto:basuraj.bhowmik@strath.ac.uk?subject=TRACE-DT%20Idea%20Factory"
+
+# The LinkedIn page for the project (see README for how to create one).
+# Until you make it, this points at the CoSeC LinkedIn.
+linkedin_url: "https://www.linkedin.com/in/cosec-ukri/"
+
+# Highlight colour used for links, markers and the plot line.
+# Engineering blue is the Strathclyde faculty colour.
+highlight: "#0078ae"
+
+# ----------------------------------------------------------
+#  The right-hand panel shown on every page. Edit freely.
+# ----------------------------------------------------------
+rail_facts:
+  - label: "Fellow"
+    value: "Dr Basuraj Bhowmik"
+  - label: "Host"
+    value: "University of Strathclyde"
+  - label: "Funder"
+    value: "CoSeC, STFC Scientific Computing"
+  - label: "Term"
+    value: "Oct 2026 to Dec 2027"
+  - label: "Communities"
+    value: "CCP-DCM, CCP-WSI"
+
+rail_links:
+  - title: "CoSeC"
+    url: "https://www.cosec.ac.uk/"
+  - title: "Institute for Future Cities"
+    url: "https://www.strath.ac.uk/research/instituteforfuturecities/"
+  - title: "University of Strathclyde"
+    url: "https://www.strath.ac.uk/"
+
+# Menu. Add, remove or reorder lines to change the menu.
+nav:
+  - title: "Home"
+    url: "index.html"
+  - title: "Participants"
+    url: "participants.html"
+  - title: "News"
+    url: "news.html"
+  - title: "Outputs"
+    url: "publications.html"
+  - title: "Contact"
+    url: "contact.html"
+
+# ----------------------------------------------------------
+#  Technical settings. No need to change anything below.
+# ----------------------------------------------------------
+markdown: kramdown
+exclude:
+  - README.md
+  - LINKEDIN.md

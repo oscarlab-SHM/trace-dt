@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title and page.title != site.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ site.title }}: {{ site.tagline }}. A CoSeC Fellowship at the University of Strathclyde.">
+<meta name="author" content="{{ site.fellow }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+{% assign here = page.url | remove_first: "/" %}{% if here == "" %}{% assign here = "index.html" %}{% endif %}
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="index.html">TRACE<span>-</span>DT</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu" class="menu" aria-label="Main">
+      {% for item in site.nav %}<a href="{{ item.url }}"{% if item.url == here %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+
+{{ content }}
+
+<footer class="site-foot">
+  <div class="wrap foot-row">
+    <span>{{ site.title }} is a CoSeC Fellowship (STFC Scientific Computing) held by {{ site.fellow }}.</span>
+    <span>Department of Civil and Environmental Engineering, University of Strathclyde, Glasgow</span>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

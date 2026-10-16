@@ -1,0 +1,76 @@
+---
+layout: base
+---
+<!-- ===== Interactive demonstrator hero: draggable bridge digital twin ===== -->
+<section class="demo-hero"><div class="wrap demo-grid">
+  <div class="demo-intro">
+    <p class="kicker">CoSeC Fellowship, {{ page.term }}</p>
+    <h1>{{ page.headline }}</h1>
+    <p class="lede">{{ page.intro }}</p>
+    <div class="demo-cta">
+      <a class="btn solid" href="{{ site.register_url }}">Register your interest</a>
+      <a class="btn ghost" href="participants.html">About the fellowship</a>
+    </div>
+  </div>
+  <figure class="demo-stage">
+    <figcaption class="demo-head">
+      <span class="live">Live digital twin</span>
+      <span class="demo-hint">Drag the truck. Move the damage slider.</span>
+    </figcaption>
+    <canvas id="demo" aria-label="Interactive bridge: drag the load along the deck and add damage to see the twin track the natural frequency"></canvas>
+    <div class="demo-readout">
+      <div>Mode 1 frequency<b id="d-f">2.41 Hz</b></div>
+      <div>Load position<b id="d-x">mid-span</b></div>
+      <div>Stiffness loss<b id="d-d">0%</b></div>
+      <div>Twin status<b id="d-s">Healthy</b></div>
+    </div>
+    <div class="demo-controls">
+      <label for="dmg">Simulate damage (stiffness loss)</label>
+      <input id="dmg" type="range" min="0" max="40" value="0" step="1" aria-label="Stiffness loss percentage">
+    </div>
+    <p class="demo-note">Illustrative model. The twin re-estimates the first natural frequency as you load and damage the deck, and raises an alarm when it drops.</p>
+  </figure>
+</div></section>
+
+<section class="wrap trace-def">
+  <div><span class="big">T</span><h3>Trustworthy</h3><p>Every estimate comes with its uncertainty and a record of how it was formed.</p></div>
+  <div><span class="big">R</span><h3>Real-time</h3><p>Twins that update with every sample, not once a year.</p></div>
+  <div><span class="big">A</span><h3>Agentic</h3><p>AI agents that help with decisions, with a person kept in the loop.</p></div>
+  <div><span class="big">C</span><h3>Community</h3><p>Engineers and CoSeC software communities working to one agenda.</p></div>
+</section>
+
+<div class="wrap layout">
+  <main class="main page-body">
+{{ content }}
+  </main>
+  <aside class="rail">
+    <div class="rail-cta">
+      <h2>Join the Idea Factory</h2>
+      <p>Engineers, research software developers and asset owners are all welcome.</p>
+      <a class="btn solid block" href="{{ site.register_url }}">Register your interest</a>
+      <a class="btn ghost block" href="{{ site.linkedin_url }}">Follow on LinkedIn</a>
+    </div>
+    <div class="rail-card">
+      <h3>At a glance</h3>
+      <dl class="facts">
+        {% for f in site.rail_facts %}<dt>{{ f.label }}</dt><dd>{{ f.value }}</dd>
+        {% endfor %}
+      </dl>
+    </div>
+    <div class="rail-card">
+      <h3>Links</h3>
+      <ul class="rail-links">
+        {% for l in site.rail_links %}<li><a href="{{ l.url }}">{{ l.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<section class="wrap"><div class="cta-band">
+  <div>
+    <h2>Help shape the agenda</h2>
+    <p>We are looking for engineers, research software developers and asset owners to join the TRACE-DT Idea Factory in Glasgow.</p>
+  </div>
+  <a class="btn solid" href="{{ site.register_url }}">Register your interest</a>
+</div></section>

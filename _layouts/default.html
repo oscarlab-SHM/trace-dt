@@ -1,0 +1,30 @@
+---
+layout: base
+---
+<div class="wrap layout">
+  <main class="main page-body">
+{{ content }}
+  </main>
+  <aside class="rail">
+    <div class="rail-cta">
+      <h2>Join the Idea Factory</h2>
+      <p>Engineers, research software developers and asset owners are all welcome.</p>
+      <a class="btn solid block" href="{{ site.register_url }}">Register your interest</a>
+      <a class="btn ghost block" href="{{ site.linkedin_url }}">Follow on LinkedIn</a>
+    </div>
+    <div class="rail-card">
+      <h3>At a glance</h3>
+      <dl class="facts">
+        {% for f in site.rail_facts %}<dt>{{ f.label }}</dt><dd>{{ f.value }}</dd>
+        {% endfor %}
+      </dl>
+    </div>
+    <div class="rail-card">
+      <h3>Links</h3>
+      <ul class="rail-links">
+        {% for l in site.rail_links %}<li><a href="{{ l.url }}">{{ l.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </aside>
+</div>
